@@ -28,4 +28,9 @@ class Contact extends Controller {
         $this->view('contact/cobalagi', $data);
         $this->view('templates/footer');
     }
+
+    // public function set($newNama)
+    // {
+        
+    // }
 }

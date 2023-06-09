@@ -10,6 +10,13 @@
             text-decoration: none;
         }
     </style>
+    <!-- <script>
+        const myModal = new bootstrap.Modal.getOrCreateInstance('#homeModal');
+
+        window.addEventListener('DOMContentLoaded', () => {
+            myModal.show();
+        });
+    </script> -->
 </head>
 <body>
 
