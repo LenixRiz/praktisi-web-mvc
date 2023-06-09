@@ -12,7 +12,7 @@
                 Tambah Data Mahasiswa
             </button>
             <h3 class="mt-3">Daftar Mahasiswa Berprestasi</h3>
-            <ul class="list-group">
+            <ul class="list-group mt-3">
                 <?php foreach ($data['mhs'] as $mhs) : ?>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <?= $mhs['nama']?>
@@ -73,7 +73,13 @@
                     <!-- prestasi -->
                     <div class="mb-3">
                         <label for="prestasi" class="form-label">Prestasi</label>
-                        <input type="prestasi" class="form-control" id="prestasi" name="prestasi" placeholder="Kompetisi Hacknation 20xx">
+                        <input type="text" class="form-control" id="prestasi" name="prestasi" placeholder="Kompetisi Hacknation 20xx">
+                    </div>
+
+                    <!-- tahun -->
+                    <div class="mb-3">
+                        <label for="tahun" class="form-label">Tahun</label>
+                        <input type="number" class="form-control" id="tahun" name="tahun" placeholder="20xx">
                     </div>
 
                     <!-- tingkat -->
