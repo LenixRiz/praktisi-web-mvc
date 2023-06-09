@@ -11,14 +11,14 @@
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
                 Tambah Data Mahasiswa
             </button>
-            <h3 class="mt-3">Daftar Mahasiswa</h3>
+            <h3 class="mt-3">Daftar Mahasiswa Berprestasi</h3>
             <ul class="list-group">
                 <?php foreach ($data['mhs'] as $mhs) : ?>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <?= $mhs['nama']?>
                         <div>
-                            <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']?>" class="badge text-bg-primary">detail</a>
-                            <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']?>" class="badge text-bg-danger" onclick="return confirm('Yakin?')">hapus</a>
+                            <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']?>" class="badge text-bg-primary ms-2">detail</a>
+                            <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']?>" class="badge text-bg-danger ms-2" onclick="return confirm('Yakin?')">hapus</a>
                         </div>
                     </li>
                 <?php endforeach; ?>
@@ -47,10 +47,10 @@
                         <input type="text" class="form-control" id="nama" name="nama" placeholder="nama">
                     </div>
 
-                    <!-- nrp -->
+                    <!-- nim -->
                     <div class="mb-3">
-                        <label for="nrp" class="form-label">NRP</label>
-                        <input type="number" class="form-control" id="nrp" name="nrp" placeholder="22520000">
+                        <label for="nim" class="form-label">NIM</label>
+                        <input type="number" class="form-control" id="nim" name="nim" placeholder="22520000">
                     </div>
 
                     <!-- email -->
@@ -67,6 +67,24 @@
                             <option value="Teknologi Informasi">Teknologi Informasi</option>
                             <option value="Sistem Informasi">Sistem Informasi</option>
                             <option value="Manajemen Informasi">Manajemen Informasi</option>
+                        </select>
+                    </div>
+
+                    <!-- prestasi -->
+                    <div class="mb-3">
+                        <label for="prestasi" class="form-label">Prestasi</label>
+                        <input type="prestasi" class="form-control" id="prestasi" name="prestasi" placeholder="Kompetisi Hacknation 20xx">
+                    </div>
+
+                    <!-- tingkat -->
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="tingkat">Tingkat</label>
+                        <select class="form-select" id="tingkat" name="tingkat">
+                            <option selected>Pilih...</option>
+                            <option value="Kota/Kabupaten">Kota/Kabupaten</option>
+                            <option value="Provinsi">Provinsi</option>
+                            <option value="Nasional">Nasional</option>
+                            <option value="Internasional">Internasional</option>
                         </select>
                     </div>
 
